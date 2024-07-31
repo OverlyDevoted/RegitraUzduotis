@@ -10,9 +10,11 @@ import DetailedCarDialog from './components/DetailedCarDialog/DetailedCarDialog'
 const CarListPage = () => {
   const [inspectedCar, setInspectedCar] = useState<NamedBaseCar>();
 
-  const { data: baseCarData, isLoading: isCarDataLoading } = useFetchData<BaseCars>(
-    'http://localhost:3000/baseCars'
-  );
+  const {
+    data: baseCarData,
+    isLoading: isCarDataLoading,
+    setData: setBaseCarData,
+  } = useFetchData<BaseCars>('http://localhost:3000/baseCars');
   const { isCategoryMapLoading, categoryMap } = useCategoryMap('http://localhost:3000/categories');
 
   const isLoading = isCarDataLoading || isCategoryMapLoading;
@@ -30,23 +32,28 @@ const CarListPage = () => {
 
   return (
     <>
-      <Container sx={{ py: 1 }}>
+      <Container sx={{ py: 1, flex: 1 }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <CarListHeader />
           <CarListTable
             cars={namedBaseCars}
             isLoading={isCarDataLoading}
             onCarInspect={(car) => setInspectedCar(car)}
+            onCarRemove={(id: string) => {
+              setBaseCarData(baseCarData?.filter((baseCar) => baseCar.id !== id) as BaseCars);
+            }}
           />
         </Box>
       </Container>
 
-      <DetailedCarDialog
-        car={inspectedCar}
-        onClose={() => {
-          setInspectedCar(undefined);
-        }}
-      />
+      {inspectedCar && (
+        <DetailedCarDialog
+          car={inspectedCar}
+          onClose={() => {
+            setInspectedCar(undefined);
+          }}
+        />
+      )}
 
       <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={isLoading}>
         <CircularProgress color="inherit" />

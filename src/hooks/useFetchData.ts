@@ -6,6 +6,7 @@ export const useFetchData = <T>(url: string, timeout: number = 3000) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    if (data) return;
     setTimeout(() => {
       axios
         .get(url)
@@ -17,10 +18,11 @@ export const useFetchData = <T>(url: string, timeout: number = 3000) => {
         })
         .finally(() => setIsLoading(false));
     }, timeout);
-  }, [url, timeout]);
+  }, [url, timeout, data]);
 
   const invalidate = () => {
     setData(null);
+    setIsLoading(true);
   };
-  return { data, isLoading, invalidate };
+  return { data, setData, isLoading, invalidate };
 };

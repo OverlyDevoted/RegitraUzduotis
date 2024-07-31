@@ -38,7 +38,9 @@ const DetailedCarDialog = ({ car, onClose }: DialogProps) => {
           paddingRight: 2,
           justifyContent: 'space-between',
         }}>
-        <DialogTitle component={'h2'}>Detalus transporto priemonės aprašymas</DialogTitle>
+        <DialogTitle sx={{ wordWrap: 'break-word' }} component={'h2'}>
+          Detalus transporto priemonės aprašymas
+        </DialogTitle>
         <IconButton aria-label="close" onClick={handleClose}>
           <CloseIcon />
         </IconButton>
