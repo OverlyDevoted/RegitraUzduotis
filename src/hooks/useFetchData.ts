@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-export const useFetchData = <T>(url: string) => {
+export const useFetchData = <T>(url: string, timeout: number = 3000) => {
   const [data, setData] = useState<T | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -16,8 +16,11 @@ export const useFetchData = <T>(url: string) => {
           console.log(e);
         })
         .finally(() => setIsLoading(false));
-    }, 3000);
-  }, [url]);
+    }, timeout);
+  }, [url, timeout]);
 
-  return { data, isLoading };
+  const invalidate = () => {
+    setData(null);
+  };
+  return { data, isLoading, invalidate };
 };
