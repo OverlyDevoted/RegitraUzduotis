@@ -8,246 +8,246 @@
     {
       "brand": "Hyundai",
       "model": "Altima",
-      "yearOfManufacture": 2002,
-      "registerNumber": "ZRE383",
+      "manufactureYear": 2002,
+      "registrationNumber": "ZRE383",
       "code": "TRUCK"
     },
     {
       "brand": "Nissan",
       "model": "E-Class",
-      "yearOfManufacture": 2018,
-      "registerNumber": "UEE128",
+      "manufactureYear": 2018,
+      "registrationNumber": "UEE128",
       "code": "CAR"
     },
     {
       "brand": "Hyundai",
       "model": "E-Class",
-      "yearOfManufacture": 2015,
-      "registerNumber": "ZDA260",
+      "manufactureYear": 2015,
+      "registrationNumber": "ZDA260",
       "code": "CAR"
     },
     {
       "brand": "Chevrolet",
       "model": "X5",
-      "yearOfManufacture": 2014,
-      "registerNumber": "VQP378",
+      "manufactureYear": 2014,
+      "registrationNumber": "VQP378",
       "code": "BUS"
     },
     {
       "brand": "Volkswagen",
       "model": "Golf",
-      "yearOfManufacture": 2000,
-      "registerNumber": "XGR153",
+      "manufactureYear": 2000,
+      "registrationNumber": "XGR153",
       "code": "BUS"
     },
     {
       "brand": "Mercedes",
       "model": "X5",
-      "yearOfManufacture": 2013,
-      "registerNumber": "WSC109",
+      "manufactureYear": 2013,
+      "registrationNumber": "WSC109",
       "code": "CAR"
     },
     {
       "brand": "Hyundai",
       "model": "Civic",
-      "yearOfManufacture": 2000,
-      "registerNumber": "BUY267",
+      "manufactureYear": 2000,
+      "registrationNumber": "BUY267",
       "code": "TRUCK"
     },
     {
       "brand": "Chevrolet",
       "model": "Accord",
-      "yearOfManufacture": 2015,
-      "registerNumber": "TYC301",
+      "manufactureYear": 2015,
+      "registrationNumber": "TYC301",
       "code": "TRUCK"
     },
     {
       "brand": "Volkswagen",
       "model": "Santa Fe",
-      "yearOfManufacture": 2002,
-      "registerNumber": "JGW919",
+      "manufactureYear": 2002,
+      "registrationNumber": "JGW919",
       "code": "BUS"
     },
     {
       "brand": "Honda",
       "model": "Santa Fe",
-      "yearOfManufacture": 2000,
-      "registerNumber": "XHY274",
+      "manufactureYear": 2000,
+      "registrationNumber": "XHY274",
       "code": "BUS"
     },
     {
       "brand": "Honda",
       "model": "X5",
-      "yearOfManufacture": 2019,
-      "registerNumber": "MVO127",
+      "manufactureYear": 2019,
+      "registrationNumber": "MVO127",
       "code": "CAR"
     },
     {
       "brand": "Toyota",
       "model": "X5",
-      "yearOfManufacture": 2001,
-      "registerNumber": "VCD896",
+      "manufactureYear": 2001,
+      "registrationNumber": "VCD896",
       "code": "BUS"
     },
     {
       "brand": "Mercedes",
       "model": "Altima",
-      "yearOfManufacture": 2009,
-      "registerNumber": "NWF116",
+      "manufactureYear": 2009,
+      "registrationNumber": "NWF116",
       "code": "CAR"
     },
     {
       "brand": "Chevrolet",
       "model": "F-150",
-      "yearOfManufacture": 2016,
-      "registerNumber": "WWN794",
+      "manufactureYear": 2016,
+      "registrationNumber": "WWN794",
       "code": "TRUCK"
     },
     {
       "brand": "Toyota",
       "model": "Golf",
-      "yearOfManufacture": 2015,
-      "registerNumber": "NBH099",
+      "manufactureYear": 2015,
+      "registrationNumber": "NBH099",
       "code": "CAR"
     },
     {
       "brand": "Hyundai",
       "model": "Altima",
-      "yearOfManufacture": 2001,
-      "registerNumber": "QGJ145",
+      "manufactureYear": 2001,
+      "registrationNumber": "QGJ145",
       "code": "CAR"
     },
     {
       "brand": "Chevrolet",
       "model": "Civic",
-      "yearOfManufacture": 2008,
-      "registerNumber": "HUJ405",
+      "manufactureYear": 2008,
+      "registrationNumber": "HUJ405",
       "code": "TRUCK"
     },
     {
       "brand": "Kia",
       "model": "Altima",
-      "yearOfManufacture": 2003,
-      "registerNumber": "PFT869",
+      "manufactureYear": 2003,
+      "registrationNumber": "PFT869",
       "code": "CAR"
     },
     {
       "brand": "Kia",
       "model": "X5",
-      "yearOfManufacture": 2017,
-      "registerNumber": "XVP507",
+      "manufactureYear": 2017,
+      "registrationNumber": "XVP507",
       "code": "CAR"
     },
     {
       "brand": "Kia",
       "model": "Santa Fe",
-      "yearOfManufacture": 2013,
-      "registerNumber": "VLF842",
+      "manufactureYear": 2013,
+      "registrationNumber": "VLF842",
       "code": "BUS"
     },
     {
       "brand": "Ford",
       "model": "E-Class",
-      "yearOfManufacture": 2013,
-      "registerNumber": "RWT826",
+      "manufactureYear": 2013,
+      "registrationNumber": "RWT826",
       "code": "BUS"
     },
     {
       "brand": "Kia",
       "model": "Civic",
-      "yearOfManufacture": 2020,
-      "registerNumber": "UBD040",
+      "manufactureYear": 2020,
+      "registrationNumber": "UBD040",
       "code": "TRUCK"
     },
     {
       "brand": "Ford",
       "model": "Altima",
-      "yearOfManufacture": 2000,
-      "registerNumber": "WDU137",
+      "manufactureYear": 2000,
+      "registrationNumber": "WDU137",
       "code": "CAR"
     },
     {
       "brand": "Volkswagen",
       "model": "X5",
-      "yearOfManufacture": 2022,
-      "registerNumber": "DNE238",
+      "manufactureYear": 2022,
+      "registrationNumber": "DNE238",
       "code": "TRUCK"
     },
     {
       "brand": "Nissan",
       "model": "X5",
-      "yearOfManufacture": 2023,
-      "registerNumber": "OAU508",
+      "manufactureYear": 2023,
+      "registrationNumber": "OAU508",
       "code": "TRUCK"
     },
     {
       "brand": "Mercedes",
       "model": "Santa Fe",
-      "yearOfManufacture": 2007,
-      "registerNumber": "XPK125",
+      "manufactureYear": 2007,
+      "registrationNumber": "XPK125",
       "code": "BUS"
     },
     {
       "brand": "Nissan",
       "model": "Civic",
-      "yearOfManufacture": 2011,
-      "registerNumber": "MMF284",
+      "manufactureYear": 2011,
+      "registrationNumber": "MMF284",
       "code": "BUS"
     },
     {
       "brand": "Hyundai",
       "model": "Golf",
-      "yearOfManufacture": 2000,
-      "registerNumber": "RLB230",
+      "manufactureYear": 2000,
+      "registrationNumber": "RLB230",
       "code": "TRUCK"
     },
     {
       "brand": "Ford",
       "model": "E-Class",
-      "yearOfManufacture": 2021,
-      "registerNumber": "RPJ349",
+      "manufactureYear": 2021,
+      "registrationNumber": "RPJ349",
       "code": "BUS"
     },
     {
       "brand": "Volkswagen",
       "model": "Accord",
-      "yearOfManufacture": 2021,
-      "registerNumber": "ITP403",
+      "manufactureYear": 2021,
+      "registrationNumber": "ITP403",
       "code": "TRUCK"
     },
     {
       "brand": "Nissan",
       "model": "Accord",
-      "yearOfManufacture": 2001,
-      "registerNumber": "NRN612",
+      "manufactureYear": 2001,
+      "registrationNumber": "NRN612",
       "code": "TRUCK"
     },
     {
       "brand": "Mercedes",
       "model": "Santa Fe",
-      "yearOfManufacture": 2018,
-      "registerNumber": "MYN929",
+      "manufactureYear": 2018,
+      "registrationNumber": "MYN929",
       "code": "BUS"
     },
     {
       "brand": "BMW",
       "model": "Silverado",
-      "yearOfManufacture": 2001,
-      "registerNumber": "TBM041",
+      "manufactureYear": 2001,
+      "registrationNumber": "TBM041",
       "code": "CAR"
     },
     {
       "brand": "Nissan",
       "model": "Santa Fe",
-      "yearOfManufacture": 2023,
-      "registerNumber": "YXH021",
+      "manufactureYear": 2023,
+      "registrationNumber": "YXH021",
       "code": "BUS"
     },
     {
       "brand": "Nissan",
       "model": "Altima",
-      "yearOfManufacture": 2022,
-      "registerNumber": "QEB962",
+      "manufactureYear": 2022,
+      "registrationNumber": "QEB962",
       "code": "CAR"
     }
   ]
