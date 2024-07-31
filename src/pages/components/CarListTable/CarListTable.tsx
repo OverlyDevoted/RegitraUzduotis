@@ -5,27 +5,17 @@ import {
   TableCell,
   TableContainer,
   TableHead,
-  TablePagination,
   TableRow,
 } from '@mui/material';
-import CarListTableItem from './components/CarListTableItem';
-import { useState } from 'react';
-import { rowPerPageOptions } from './constants/tablePagination.constants';
-import React from 'react';
+import { Cars } from '@/pages/types/carType';
+import CarListTableEmpty from './components/CarListTableEmpty/CarListTableEmpty';
+import CarListTableItem from './components/CarListTableItem/CarListTableItem';
 
-const CarListTable = () => {
-  const [page, setPage] = useState(2);
-  const [rowsPerPage, setRowsPerPage] = useState(rowPerPageOptions[0]);
-  const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
-    setPage(newPage);
-  };
+interface CarListTableProps {
+  cars: Cars | null;
+}
 
-  const handleChangeRowsPerPage = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setRowsPerPage(Number(e.target.value));
-  };
-
+const CarListTable = ({ cars }: CarListTableProps) => {
   return (
     <Paper>
       <TableContainer>
@@ -38,24 +28,28 @@ const CarListTable = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            <CarListTableItem
-              typeName="Lengvasis automobilis"
-              registrationNumber="AAA000"
-              onDelete={() => console.log('id')}
-              onView={() => console.log('open dialog')}
-            />
+            {cars ? (
+              cars.map((car) => {
+                return (
+                  <CarListTableItem
+                    key={car.id}
+                    typeName={car.code}
+                    registrationNumber={car.registrationNumber}
+                    onDelete={() => {
+                      console.log(`Delete ${car.id}`);
+                    }}
+                    onView={() => {
+                      console.log(`view ${car.id}`);
+                    }}
+                  />
+                );
+              })
+            ) : (
+              <CarListTableEmpty emptyCellType="loading" />
+            )}
           </TableBody>
         </Table>
       </TableContainer>
-      <TablePagination
-        rowsPerPageOptions={rowPerPageOptions}
-        component={'div'}
-        rowsPerPage={rowsPerPage}
-        count={100}
-        page={page}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-      />
     </Paper>
   );
 };
