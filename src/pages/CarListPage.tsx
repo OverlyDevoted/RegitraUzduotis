@@ -1,11 +1,15 @@
-import { Container } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { CarListHeader } from './components/CarListHeader';
+import CarListTable from './components/CarListTable/CarListTable';
 
 const CarListPage = () => {
   return (
     <>
       <Container sx={{ py: 1 }}>
-        <CarListHeader />
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+          <CarListHeader />
+          <CarListTable />
+        </Box>
       </Container>
     </>
   );
