@@ -7,7 +7,7 @@ import {
   TableHead,
   TableRow,
 } from '@mui/material';
-import { NamedBaseCars } from '@/pages/types/car.types';
+import { NamedBaseCar, NamedBaseCars } from '@/pages/types/car.types';
 import CarListTableEmpty from './components/CarListTableEmpty/CarListTableEmpty';
 import CarListTableItem from './components/CarListTableItem/CarListTableItem';
 import { getEmptyTableType } from './utils/getEmptyTableType';
@@ -15,9 +15,10 @@ import { getEmptyTableType } from './utils/getEmptyTableType';
 interface CarListTableProps {
   cars: NamedBaseCars | undefined;
   isLoading: boolean;
+  onCarInspect: (car: NamedBaseCar) => void;
 }
 
-const CarListTable = ({ cars, isLoading = true }: CarListTableProps) => {
+const CarListTable = ({ cars, isLoading = true, onCarInspect }: CarListTableProps) => {
   const emptyTableType = getEmptyTableType(cars?.length, isLoading);
 
   return (
@@ -43,7 +44,7 @@ const CarListTable = ({ cars, isLoading = true }: CarListTableProps) => {
                       console.log(`Delete ${car.id}`);
                     }}
                     onView={() => {
-                      console.log(`view ${car.id}`);
+                      onCarInspect(car);
                     }}
                   />
                 );

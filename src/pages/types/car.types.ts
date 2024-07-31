@@ -15,3 +15,6 @@ export interface DetailedCar {
   model: string;
   manufactureYear: number;
 }
+export type DetailedCars = DetailedCar[];
+
+export type FullCar = BaseCar & DetailedCar;
