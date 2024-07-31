@@ -7,19 +7,19 @@ import {
   TableHead,
   TableRow,
 } from '@mui/material';
-import { Cars } from '@/pages/types/carType';
+import { NamedBaseCars } from '@/pages/types/car.types';
 import CarListTableEmpty from './components/CarListTableEmpty/CarListTableEmpty';
 import CarListTableItem from './components/CarListTableItem/CarListTableItem';
 
 interface CarListTableProps {
-  cars: Cars | null;
+  cars: NamedBaseCars | undefined;
 }
 
 const CarListTable = ({ cars }: CarListTableProps) => {
   return (
     <Paper>
-      <TableContainer>
-        <Table aria-label="Transporto priemonių lentelė">
+      <TableContainer sx={{ maxHeight: 440 }}>
+        <Table aria-label="Transporto priemonių lentelė" stickyHeader>
           <TableHead>
             <TableRow>
               <TableCell>Valstybinis numeris</TableCell>
@@ -33,7 +33,7 @@ const CarListTable = ({ cars }: CarListTableProps) => {
                 return (
                   <CarListTableItem
                     key={car.id}
-                    typeName={car.code}
+                    typeName={car.typeName}
                     registrationNumber={car.registrationNumber}
                     onDelete={() => {
                       console.log(`Delete ${car.id}`);

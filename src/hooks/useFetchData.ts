@@ -11,11 +11,11 @@ export const useFetchData = <T>(url: string) => {
         .get(url)
         .then((response) => {
           setData(response.data);
-          setIsLoading(false);
         })
         .catch((e) => {
           console.log(e);
-        });
+        })
+        .finally(() => setIsLoading(false));
     }, 3000);
   }, [url]);
 
