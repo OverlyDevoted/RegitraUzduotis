@@ -10,13 +10,13 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh', 'prettier'],
+  plugins: ['react', 'react-refresh', '@typescript-eslint', 'prettier'],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
     'max-lines-per-function': ['warn', 100],
-    'no-multi-spaces': ['error']
+    'no-multi-spaces': ['error'],
   },
 }
