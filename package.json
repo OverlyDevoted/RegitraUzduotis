@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "husky",
-    "pretify": "prettier . --write"
+    "pretify": "prettier . --write",
+    "server": "npx json-server ./data/db.json"
   },
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": [
@@ -24,6 +25,7 @@
     "@emotion/styled": "^11.13.0",
     "@fontsource/roboto": "^5.0.13",
     "@mui/material": "^5.16.5",
+    "json-server": "^1.0.0-beta.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
