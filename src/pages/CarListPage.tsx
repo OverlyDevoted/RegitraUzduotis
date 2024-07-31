@@ -29,7 +29,7 @@ const CarListPage = () => {
       <Container sx={{ py: 1 }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
           <CarListHeader />
-          <CarListTable cars={namedBaseCars} />
+          <CarListTable cars={namedBaseCars} isLoading={isCarDataLoading} />
         </Box>
       </Container>
 

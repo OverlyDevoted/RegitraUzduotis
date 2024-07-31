@@ -10,12 +10,16 @@ import {
 import { NamedBaseCars } from '@/pages/types/car.types';
 import CarListTableEmpty from './components/CarListTableEmpty/CarListTableEmpty';
 import CarListTableItem from './components/CarListTableItem/CarListTableItem';
+import { getEmptyTableType } from './utils/getEmptyTableType';
 
 interface CarListTableProps {
   cars: NamedBaseCars | undefined;
+  isLoading: boolean;
 }
 
-const CarListTable = ({ cars }: CarListTableProps) => {
+const CarListTable = ({ cars, isLoading = true }: CarListTableProps) => {
+  const emptyTableType = getEmptyTableType(cars?.length, isLoading);
+
   return (
     <Paper>
       <TableContainer sx={{ maxHeight: 440 }}>
@@ -45,7 +49,7 @@ const CarListTable = ({ cars }: CarListTableProps) => {
                 );
               })
             ) : (
-              <CarListTableEmpty emptyCellType="loading" />
+              <CarListTableEmpty emptyCellType={emptyTableType} />
             )}
           </TableBody>
         </Table>
