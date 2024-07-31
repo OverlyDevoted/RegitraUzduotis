@@ -1,10 +1,11 @@
-import { Container, Typography } from '@mui/material';
-
+import CarListPage from '@pages/CarListPage';
+import Header from './components/Header/Header';
 function App() {
   return (
-    <Container>
-      <Typography>Hello World!</Typography>
-    </Container>
+    <>
+      <Header />
+      <CarListPage />
+    </>
   );
 }
 
