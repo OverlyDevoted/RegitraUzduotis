@@ -7,6 +7,7 @@ export const useFetchData = <T>(url: string, timeout: number = 3000) => {
 
   useEffect(() => {
     if (data) return;
+    setIsLoading(true);
     const controller = new AbortController();
     setTimeout(() => {
       axios

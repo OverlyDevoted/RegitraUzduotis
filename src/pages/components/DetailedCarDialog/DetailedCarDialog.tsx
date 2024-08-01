@@ -19,10 +19,11 @@ interface DialogProps {
 }
 
 const DetailedCarDialog = ({ car, onClose }: DialogProps) => {
-  const { data: detailedCarData, invalidate } = useFetchData<DetailedCar>(
-    `http://localhost:3000/detailedCars/${car?.id}`,
-    0
-  );
+  const {
+    data: detailedCarData,
+    invalidate,
+    isLoading,
+  } = useFetchData<DetailedCar>(`http://localhost:3000/detailedCars/${car?.id}`, 0);
 
   const isDialogOpen = !!car;
   const handleClose = () => {
@@ -69,7 +70,7 @@ const DetailedCarDialog = ({ car, onClose }: DialogProps) => {
           </Grid>
           <Grid item xs={6}>
             <Typography className="dialog-value" component={'b'}>
-              {detailedCarData?.brand}
+              {!isLoading ? detailedCarData?.brand : 'Kraunami duomenys'}
             </Typography>
           </Grid>
           <Grid item xs={6}>
@@ -77,7 +78,7 @@ const DetailedCarDialog = ({ car, onClose }: DialogProps) => {
           </Grid>
           <Grid item xs={6}>
             <Typography className="dialog-value" component={'b'}>
-              {detailedCarData?.model}
+              {!isLoading ? detailedCarData?.model : 'Kraunami duomenys'}
             </Typography>
           </Grid>
           <Grid item xs={6}>
@@ -85,7 +86,7 @@ const DetailedCarDialog = ({ car, onClose }: DialogProps) => {
           </Grid>
           <Grid item xs={6}>
             <Typography className="dialog-value" component={'b'}>
-              {detailedCarData?.manufactureYear}
+              {!isLoading ? detailedCarData?.manufactureYear : 'Kraunami duomenys'}
             </Typography>
           </Grid>
         </Grid>
