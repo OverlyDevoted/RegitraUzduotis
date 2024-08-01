@@ -9,10 +9,10 @@ import {
 } from '@mui/material';
 import { NamedBaseCar, NamedBaseCars } from '@/pages/types/car.types';
 import CarListTableEmpty from './components/CarListTableEmpty/CarListTableEmpty';
-import CarListTableItem from './components/CarListTableItem/CarListTableItem';
 import { getEmptyTableType } from './utils/getEmptyTableType';
 import axios from 'axios';
 import { useMemo } from 'react';
+import CarListTableItem from './components/CarListTableItem/CarListTableItem';
 
 interface CarListTableProps {
   cars: NamedBaseCars | undefined;
@@ -29,7 +29,7 @@ const CarListTable = ({ cars, isLoading = true, onCarInspect, onCarRemove }: Car
 
   return (
     <Paper>
-      <TableContainer sx={{ maxHeight: 440 }}>
+      <TableContainer sx={{ maxHeight: 440, tableLayout: 'fixed', width: '100%' }}>
         <Table aria-label="Transporto priemonių lentelė" stickyHeader>
           <TableHead>
             <TableRow>

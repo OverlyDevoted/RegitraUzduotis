@@ -6,35 +6,52 @@ import { BaseCars, NamedBaseCar, NamedBaseCars } from './types/car.types';
 import { useCategoryMap } from '@/hooks/useCategoryMap';
 import { useMemo, useState } from 'react';
 import DetailedCarDialog from './components/DetailedCarDialog/DetailedCarDialog';
+import CarFilterSelect from './components/CarFilterSelect/CarFilterSelect';
 
 const CarListPage = () => {
   const [inspectedCar, setInspectedCar] = useState<NamedBaseCar>();
-
+  const [selectedType, setSelectedType] = useState<string>('');
   const {
     data: baseCarData,
     isLoading: isCarDataLoading,
     setData: setBaseCarData,
   } = useFetchData<BaseCars>('http://localhost:3000/baseCars');
-  const { isCategoryMapLoading, categoryMap } = useCategoryMap('http://localhost:3000/categories');
+
+  const { isCategoryMapLoading, categoryMap, categories } = useCategoryMap(
+    'http://localhost:3000/categories'
+  );
 
   const isLoading = isCarDataLoading || isCategoryMapLoading;
 
   const namedBaseCars = useMemo(() => {
     if (!(baseCarData || categoryMap)) return;
-    return baseCarData?.map((baseCar) => {
+    const filteredCarData = selectedType
+      ? baseCarData?.filter((car) => car.code === selectedType)
+      : baseCarData;
+    return filteredCarData?.map((baseCar) => {
       return {
         id: baseCar.id,
         registrationNumber: baseCar.registrationNumber,
         typeName: categoryMap?.get(baseCar.code),
       } as NamedBaseCar;
     }) as NamedBaseCars;
-  }, [categoryMap, baseCarData]);
+  }, [categoryMap, baseCarData, selectedType]);
 
   return (
     <>
-      <Container sx={{ py: 1, flex: 1 }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+      <Container sx={{ py: 2, flex: 1 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
           <CarListHeader />
+          <CarFilterSelect
+            label="Tipas"
+            categories={categories ? categories : []}
+            id="car-type-select"
+            labelId="car-type-select-label"
+            value={selectedType}
+            onChange={(e) => {
+              setSelectedType(e.target.value as string);
+            }}
+          />
           <CarListTable
             cars={namedBaseCars}
             isLoading={isCarDataLoading}

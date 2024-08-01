@@ -4,11 +4,11 @@ import { createCategoryMap } from '@/utils/createCategoryMap';
 import { useMemo } from 'react';
 
 export const useCategoryMap = (url: string) => {
-  const { data, isLoading: isCategoryMapLoading } = useFetchData<Categories>(url);
+  const { data, isLoading: isDataLoading } = useFetchData<Categories>(url);
 
   const categoryMap = useMemo(() => {
     return data ? createCategoryMap(data) : null;
   }, [data]);
 
-  return { isCategoryMapLoading, categoryMap };
+  return { isCategoryMapLoading: isDataLoading, categoryMap, categories: data };
 };
