@@ -11,6 +11,7 @@ import {
   Typography,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import './DetailedCarDialog.css';
 
 interface DialogProps {
   car: NamedBaseCar | undefined;
@@ -35,13 +36,12 @@ const DetailedCarDialog = ({ car, onClose }: DialogProps) => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          paddingRight: 2,
           justifyContent: 'space-between',
         }}>
-        <DialogTitle sx={{ wordWrap: 'break-word' }} component={'h2'}>
+        <DialogTitle sx={{ wordWrap: 'break-word', flex: 'inherit' }} component={'h2'}>
           Detalus transporto priemonės aprašymas
         </DialogTitle>
-        <IconButton aria-label="close" onClick={handleClose}>
+        <IconButton sx={{ marginRight: 2 }} aria-label="close" onClick={handleClose}>
           <CloseIcon />
         </IconButton>
       </Box>
@@ -52,31 +52,41 @@ const DetailedCarDialog = ({ car, onClose }: DialogProps) => {
             <Typography>Registracijos numeris:</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography component={'strong'}>{car?.registrationNumber}</Typography>
+            <Typography className="dialog-value" component={'b'}>
+              {car?.registrationNumber}
+            </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography>Transporto priemonės tipas:</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography component={'strong'}>{car?.typeName}</Typography>
+            <Typography className="dialog-value" component={'b'}>
+              {car?.typeName}
+            </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography>Markė:</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography component={'strong'}>{detailedCarData?.brand}</Typography>
+            <Typography className="dialog-value" component={'b'}>
+              {detailedCarData?.brand}
+            </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography>Modelis:</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography component={'strong'}>{detailedCarData?.model}</Typography>
+            <Typography className="dialog-value" component={'b'}>
+              {detailedCarData?.model}
+            </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography>Pagaminimo metai:</Typography>
           </Grid>
           <Grid item xs={6}>
-            <Typography component={'strong'}>{detailedCarData?.manufactureYear}</Typography>
+            <Typography className="dialog-value" component={'b'}>
+              {detailedCarData?.manufactureYear}
+            </Typography>
           </Grid>
         </Grid>
       </Container>

@@ -1,8 +1,20 @@
 {
   "categories": [
-    { "code": "TRUCK", "name": "Sunkvežimis" },
-    { "code": "CAR", "name": "Lengvasis automobilis" },
-    { "code": "BUS", "name": "Autobusas" }
+    {
+      "code": "TRUCK",
+      "name": "Sunkvežimis",
+      "id": "ca97"
+    },
+    {
+      "code": "CAR",
+      "name": "Lengvasis automobilis",
+      "id": "7d89"
+    },
+    {
+      "code": "BUS",
+      "name": "Autobusas",
+      "id": "dcfd"
+    }
   ],
   "baseCars": [
     {
@@ -14,11 +26,6 @@
       "registrationNumber": "UEE128",
       "code": "CAR",
       "id": "7193"
-    },
-    {
-      "registrationNumber": "ZDA260",
-      "code": "CAR",
-      "id": "e440"
     },
     {
       "registrationNumber": "VQP378",
@@ -193,12 +200,6 @@
       "brand": "Nissan",
       "model": "E-Class",
       "manufactureYear": 2018
-    },
-    {
-      "id": "e440",
-      "brand": "Hyundai",
-      "model": "E-Class",
-      "manufactureYear": 2015
     },
     {
       "id": "78ab",
