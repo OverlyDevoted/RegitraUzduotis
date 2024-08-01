@@ -29,8 +29,8 @@ const CarListTable = ({ cars, isLoading = true, onCarInspect, onCarRemove }: Car
 
   return (
     <Paper>
-      <TableContainer sx={{ maxHeight: 440, tableLayout: 'fixed', width: '100%' }}>
-        <Table aria-label="Transporto priemonių lentelė" stickyHeader>
+      <TableContainer sx={{ maxHeight: 440, width: '100%' }}>
+        <Table aria-label="Transporto priemonių lentelė" sx={{ tableLayout: 'fixed' }} stickyHeader>
           <TableHead>
             <TableRow>
               <TableCell>Valstybinis numeris</TableCell>

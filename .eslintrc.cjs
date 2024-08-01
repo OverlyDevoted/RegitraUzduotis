@@ -16,6 +16,7 @@ module.exports = {
     'max-lines-per-function': ['warn', 100],
     'no-multi-spaces': ['error'],
     'import/no-unresolved': 'error',
+    'no-console': 'warn',
   },
   settings: {
     'import/parsers': {

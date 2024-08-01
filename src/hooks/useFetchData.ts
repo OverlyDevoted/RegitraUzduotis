@@ -7,17 +7,20 @@ export const useFetchData = <T>(url: string, timeout: number = 3000) => {
 
   useEffect(() => {
     if (data) return;
+    const controller = new AbortController();
     setTimeout(() => {
       axios
-        .get(url)
+        .get(url, { signal: controller.signal })
         .then((response) => {
           setData(response.data);
         })
-        .catch((e) => {
-          console.log(e);
-        })
+        .catch(() => {})
         .finally(() => setIsLoading(false));
     }, timeout);
+
+    return () => {
+      controller.abort();
+    };
   }, [url, timeout, data]);
 
   const invalidate = () => {
